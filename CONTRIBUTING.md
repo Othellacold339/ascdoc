@@ -6,7 +6,7 @@ Thank you for your interest in contributing! Here's everything you need to get s
 
 ```bash
 # Clone the repository
-git clone https://github.com/aykutbey3543/ascdoc.git
+git clone https://github.com/spectreet/ascdoc.git
 cd ascdoc
 
 # Install dependencies
@@ -92,4 +92,4 @@ if (someCondition) {
 
 ## Questions?
 
-Open a [Discussion](https://github.com/aykutbey3543/ascdoc/discussions) or [Issue](https://github.com/aykutbey3543/ascdoc/issues).
+Open a [Discussion](https://github.com/spectreet/ascdoc/discussions) or [Issue](https://github.com/spectreet/ascdoc/issues).
