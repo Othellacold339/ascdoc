@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.p8
+.env
+.env.local
+.ascdocrc.json
+*.log
+.DS_Store
+coverage/
+.vscode/
+.idea/
