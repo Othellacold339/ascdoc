@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/social-preview.png" alt="ASC Doctor" width="640">
+
 # 🩺 ASC Doctor
 
 **Release readiness auditor for App Store Connect**
