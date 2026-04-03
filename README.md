@@ -197,7 +197,7 @@ Contributions are welcome! Here's how to get started:
 
 ```bash
 # Clone the repo
-git clone https://github.com/AykutSarac/ascdoc.git
+git clone https://github.com/aykutbey3543/ascdoc.git
 cd ascdoc
 
 # Install dependencies
@@ -222,7 +222,7 @@ node dist/index.js --demo
 
 ## 📄 License
 
-MIT © [Aykut Sarac](https://github.com/AykutSarac)
+MIT © [Spectrex](https://github.com/aykutbey3543)
 
 ---
 
@@ -230,6 +230,6 @@ MIT © [Aykut Sarac](https://github.com/AykutSarac)
 
 **If ASC Doctor saved you from a rejection, consider giving it a ⭐**
 
-[Report Bug](https://github.com/AykutSarac/ascdoc/issues) · [Request Feature](https://github.com/AykutSarac/ascdoc/issues) · [Discussions](https://github.com/AykutSarac/ascdoc/discussions)
+[Report Bug](https://github.com/aykutbey3543/ascdoc/issues) · [Request Feature](https://github.com/aykutbey3543/ascdoc/issues) · [Discussions](https://github.com/aykutbey3543/ascdoc/discussions)
 
 </div>
