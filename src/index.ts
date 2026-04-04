@@ -107,6 +107,7 @@ program
           keyId: config.keyId,
           issuerId: config.issuerId,
           keyPath: config.keyPath,
+          privateKey: config.privateKey,
         });
 
         if (spinner) spinner.text = 'Fetching app data...';
