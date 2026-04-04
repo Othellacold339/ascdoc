@@ -1,10 +1,11 @@
+import { VERSION, TOOL_NAME } from '../constants.js';
 import type { AuditReport } from '../auditors/types.js';
 
 export function renderJSON(report: AuditReport): string {
   return JSON.stringify(
     {
-      tool: 'ascdoc',
-      version: '1.0.0',
+      tool: TOOL_NAME,
+      version: VERSION,
       app: {
         name: report.appName,
         bundleId: report.bundleId,

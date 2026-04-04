@@ -2,6 +2,7 @@ import { Command } from 'commander';
 import chalk from 'chalk';
 import ora from 'ora';
 import fs from 'node:fs';
+import { VERSION, TOOL_NAME, TOOL_DESC } from './constants.js';
 import { resolveConfig, validateConfig, type ASCConfig } from './config.js';
 import { APIClient } from './api/client.js';
 import { fetchAppData } from './api/fetcher.js';
@@ -14,13 +15,11 @@ import { renderGitHub } from './reporter/github.js';
 import { renderDiff } from './reporter/diff.js';
 import { generateDemoData } from './demo/data.js';
 
-const VERSION = '1.0.0';
-
 const program = new Command();
 
 program
-  .name('ascdoc')
-  .description('🩺 Release readiness auditor for App Store Connect')
+  .name(TOOL_NAME)
+  .description(TOOL_DESC)
   .version(VERSION)
   .option('--key-id <id>', 'App Store Connect API Key ID')
   .option('--issuer-id <id>', 'App Store Connect API Issuer ID')
